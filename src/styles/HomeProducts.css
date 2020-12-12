@@ -1,0 +1,62 @@
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+
+
+.slide {
+  opacity: 1; 
+}
+
+
+.arrow {
+  display: inline-block;
+  position: absolute;
+  top: 30%;
+  cursor: pointer;
+  padding: 20px 10px;
+  background: #fcfcfc5b;
+  border: 1px solid #504e4e8e;
+  z-index: 50;
+  border-radius: 3px;
+}
+
+.arrow:focus{
+  outline: none;
+  border: 3px solid #3a3ae4cb;
+  opacity: 0.8;
+}
+
+
+
+
+.prev {
+  left: 0; 
+  transform: rotate(-180deg);
+}
+
+.next {
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

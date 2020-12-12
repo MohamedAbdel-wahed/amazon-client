@@ -8,7 +8,7 @@ import ShoppingCart from './pages/ShoppingCart';
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="app pb-12">
           <Header />
           <Switch>
               <Route exact path="/" component={Home} />
