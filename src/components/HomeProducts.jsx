@@ -4,7 +4,7 @@ import '../styles/HomeProducts.css'
 
 
 
-function HomeProducts({productsSlides}) {
+function HomeProducts({productsSlides,title}) {
 
   const NextArrow= ({onClick})=>{
      return (<button className="arrow next" onClick={onClick}>
@@ -30,7 +30,7 @@ function HomeProducts({productsSlides}) {
         infinite: false,
         lazyLoad: true,
         speed: 300,
-        slidesToShow: 6,
+        slidesToShow: 7,
         slidesToScroll: 6,
         responsive: [tablet],
         nextArrow: <NextArrow />,
@@ -38,11 +38,12 @@ function HomeProducts({productsSlides}) {
     }
 
  return (
-   <div className="home__products w-full h-72 my-6 mx-auto flex items-center bg-white">
-       <Slider {...settings} className="mx-6 w-full">
+   <div className="home__products h-76 flex flex-col my-6 mx-10 bg-white shadow-md rounded-sm">
+       <h1 className="m-6 text-xl font-bold text-gray-700">{title}</h1>
+       <Slider {...settings} className="w-full mx-auto">
           {productsSlides.map(({id,img})=>(
              <div key={id} className="flex justify-center focus:outline-none cursor-pointer">
-                  <img src={img} className="w-full h-40 xs:mx-6 object-scale-down" alt="product_image"/>
+                  <img src={img} className="w-11/12 h-40 object-scale-down" alt="product_image"/>
              </div>
           ))}
        </Slider>

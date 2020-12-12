@@ -7,13 +7,13 @@ import {topSellerImgs,shirtsImgs,kitchenImgs,toysImgs} from '../utils/productDat
 
 function Home() {
     return (
-        <div className="home">
+        <div className="home bg-gray-100">
             <LandingSlider />
             <HomeCategories />
-            <HomeProducts productsSlides={topSellerImgs} />
-            <HomeProducts productsSlides={shirtsImgs} />
-            <HomeProducts productsSlides={kitchenImgs} />
-            <HomeProducts productsSlides={toysImgs} />
+            <HomeProducts productsSlides={topSellerImgs} title={"Amazon Top Sellers"} />
+            <HomeProducts productsSlides={shirtsImgs} title={"Men's Dress Shirts under $30"}/>
+            <HomeProducts productsSlides={kitchenImgs} title={"Best Sellers in Kitchen"} />
+            <HomeProducts productsSlides={toysImgs} title={"Stuffed Animals & Toys under $10"} />
     </div>
     )
 }

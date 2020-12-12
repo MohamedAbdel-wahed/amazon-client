@@ -2,19 +2,16 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 
-
-
-.slide {
-  opacity: 1; 
+.home__products {
+  width: 94%;
 }
-
 
 .arrow {
   display: inline-block;
   position: absolute;
-  top: 30%;
+  top: 15%;
   cursor: pointer;
-  padding: 20px 10px;
+  padding: 30px 10px;
   background: #fcfcfc5b;
   border: 1px solid #504e4e8e;
   z-index: 50;
@@ -24,7 +21,7 @@
 .arrow:focus{
   outline: none;
   border: 3px solid #3a3ae4cb;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 

@@ -1,10 +1,14 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import {Link} from 'react-router-dom'
-
+import {CartContext} from '../contexts/CartContext'
 
 function Header() {
+
+    const { cartState }= useContext(CartContext)
+    const { totalCount }= cartState 
+
     return (
-        <nav className="header w-full h-16 flex items-center px-3 xs:px-6 sm:px-5 :md:px-8 bg-black overflow-hidden">
+        <nav className="header w-full h-16 flex items-center px-3 xs:px-6 sm:px-5 :md:px-8 bg-black select-none">
             <Link exact='true' to="/" className="header__logo pt-2">
                 <img src="/images/svg/logo.svg" className="w-16 xs:w-24" alt="amazon-logo"/>
             </Link>
@@ -24,7 +28,7 @@ function Header() {
                     <span className="font-bold text-xs xs:text-base text-white">& Orders</span>
                 </Link>
                 <Link to="/shopping-cart" className="flex flex-col items-center px-2 xs:px-3 border border-black hover:border-white">
-                    <span className="text-xs xs:text-base font-bold text-yellow-600">0</span>
+                    <span className="text-xs xs:text-base font-bold text-yellow-600">{totalCount && totalCount }</span>
                     <span>
                         <img src="/images/svg/cart.svg" className="w-6" alt="cart"/>
                     </span>
