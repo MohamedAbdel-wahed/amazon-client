@@ -1,8 +1,8 @@
 import React from 'react'
-import LandingSlider from '../components/LandingSlider'
-import HomeCategories from '../components/HomeCategories'
-import HomeProducts from '../components/HomeProducts'
-import {topSellerImgs,shirtsImgs,kitchenImgs,toysImgs} from '../utils/productData'
+import LandingSlider from '../../components/LandingSlider'
+import HomeCategories from '../../components/HomeCategories'
+import HomeProducts from '../../components/HomeProducts'
+import {topSellerImgs,shirtsImgs,kitchenImgs,toysImgs} from '../../utils/productData'
 
 
 function Home() {

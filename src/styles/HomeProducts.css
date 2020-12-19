@@ -6,6 +6,10 @@
   width: 94%;
 }
 
+.home__products div::-webkit-scrollbar{
+  display: none
+}
+
 .arrow {
   display: inline-block;
   position: absolute;

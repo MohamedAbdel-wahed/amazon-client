@@ -1,16 +1,17 @@
 import React,{useContext,useEffect} from 'react'
 import {Link} from 'react-router-dom'
-import {CartContext} from '../contexts/CartContext'
-import {getProducts} from '../actions/cart'
-import CartProduct from '../components/CartProduct'
-import {cartProducts} from '../utils/cartData'
-import "../styles/ShoppingCart.css"
+import CurrencyFormat from 'react-currency-format'
+import {CartContext} from '../../contexts/CartContext'
+import {getProducts} from '../../actions/cart'
+import CartProduct from '../../components/CartProduct'
+import {cartProducts} from '../../utils/cartData'
+import "../../styles/ShoppingCart.css"
 
 
 function ShoppingCart() {
 
     const { cartState, dispatch }= useContext(CartContext)
-    const { products }= cartState
+    const { products, totalCount, totalPrice }= cartState
 
   useEffect(()=>{
       dispatch(getProducts(cartProducts))
@@ -37,8 +38,17 @@ function ShoppingCart() {
                   </div>
                 </div>
             </div>
-            <div className="w-3/12 px-4">
-                    
+            <div className="w-3/12 mx-4">
+                <div className="bg-gray-200 rounded-sm py-4 px-8">
+                    <h2>
+                        Subtotal ({totalCount} Items):
+                        &nbsp;
+                        <strong>
+                            <CurrencyFormat value={totalPrice} displayType={'text'} prefix="$" thousandSeparator={true} />
+                        </strong>  
+                    </h2>
+                   <button className="w-full mt-5 px-4 py-1.5 tracking-wider text-xs font-semibold bg-gradient-to-r to-white focus:outline-none rounded-sm border transition-all duration-300 ease-out from-yellow-200 hover:from-yellow-300 border-yellow-400 text-gray-500 focus:ring-1 ring-yellow-500 focus:from-yellow-500">Proceed to Checkout</button>
+                </div>   
             </div>
         </div>
     )

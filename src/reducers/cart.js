@@ -12,6 +12,7 @@ export const cartReducer= (state,action)=>{
                 totalCount+= quantity
                 totalPrice+= quantity*price
             })
+            totalPrice= Math.round(totalPrice * 100) / 100
             state= {...state, totalCount, totalPrice}
             return state
        case 'GET_PRODUCTS':
@@ -25,6 +26,7 @@ export const cartReducer= (state,action)=>{
                 totalCount+= quantity
                 totalPrice+= quantity*price
             })
+            totalPrice= Math.round(totalPrice * 100) / 100
             state= {...state, totalCount, totalPrice}
            return state
        default: 

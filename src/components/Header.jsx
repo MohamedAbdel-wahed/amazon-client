@@ -19,7 +19,7 @@ function Header() {
                 </button>
             </div>
             <div className="header__items flex items-center justify-evenly ml-auto sm:ml-0">
-                <Link to="#" className="flex flex-col px-2 xs:px-3 py-1 border border-black hover:border-white">
+                <Link to="/login" className="flex flex-col px-2 xs:px-3 py-1 border border-black hover:border-white">
                     <span className="text-xs tracking-wide text-gray-300">Hello,</span>
                     <span className="font-bold text-xs xs:text-base text-white">Sign In</span>
                 </Link>
